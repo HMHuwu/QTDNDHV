@@ -24,12 +24,19 @@ export default function FloatingButtons() {
         {/* Các icon (ẩn hiện cùng khối) */}
         <div className="flex flex-col gap-3 items-center justify-center">
           {/* Điện thoại */}
-          <a
-            href="tel:02273898060"
+          <button
+            onClick={() => {
+              navigator.clipboard
+                .writeText("02273898060")
+                .then(() =>
+                  alert("📞 Đã sao chép số điện thoại: 0227 389 8060")
+                )
+                .catch(() => alert("⚠️ Sao chép thất bại, vui lòng thử lại!"));
+            }}
             className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white shadow-lg hover:scale-110 transition"
           >
             <Phone size={20} />
-          </a>
+          </button>
 
           {/* Zalo */}
           <a

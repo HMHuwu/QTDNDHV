@@ -84,7 +84,23 @@ export default function ContactPage() {
               <p className="text-gray-600 mb-4">
                 Điền thông tin bên dưới và chúng tôi sẽ liên hệ lại sớm nhất.
               </p>
-              <form className="space-y-4">
+              <form
+                className="space-y-4"
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.currentTarget);
+                  const data = Object.fromEntries(formData.entries());
+
+                  const res = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                  });
+
+                  const result = await res.json();
+                  alert(result.message);
+                }}
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-gray-700 font-medium">
@@ -92,6 +108,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       id="name"
+                      name="name"
                       placeholder="Nguyễn Văn A"
                       required
                       className="w-full border border-gray-200 rounded-lg p-2 focus:ring-2 focus:ring-gray-300 outline-none"
@@ -106,6 +123,7 @@ export default function ContactPage() {
                     </label>
                     <input
                       id="phone"
+                      name="phone"
                       type="tel"
                       placeholder="0912 345 678"
                       required
@@ -113,18 +131,21 @@ export default function ContactPage() {
                     />
                   </div>
                 </div>
+
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-gray-700 font-medium">
                     Email *
                   </label>
                   <input
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="email@example.com"
                     required
                     className="w-full border border-gray-200 rounded-lg p-2 focus:ring-2 focus:ring-gray-300 outline-none"
                   />
                 </div>
+
                 <div className="space-y-2">
                   <label
                     htmlFor="subject"
@@ -134,10 +155,12 @@ export default function ContactPage() {
                   </label>
                   <input
                     id="subject"
+                    name="subject"
                     placeholder="Tư vấn về sản phẩm cho vay"
                     className="w-full border border-gray-200 rounded-lg p-2 focus:ring-2 focus:ring-gray-300 outline-none"
                   />
                 </div>
+
                 <div className="space-y-2">
                   <label
                     htmlFor="message"
@@ -147,15 +170,17 @@ export default function ContactPage() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     placeholder="Nhập nội dung cần tư vấn..."
                     rows={5}
                     required
                     className="w-full border resize-none border-gray-200 rounded-lg p-2 focus:ring-2 focus:ring-gray-300 outline-none"
                   />
                 </div>
+
                 <button
                   type="submit"
-                  className="w-full bg-red-800 text-white py-2 rounded-lg hover:bg-red-900 transition flex items-center justify-center gap-2"
+                  className="w-full bg-red-800 text-white py-2 rounded-lg hover:bg-red-900 transition flex items-center cursor-pointer justify-center gap-2"
                 >
                   <Send className="w-4 h-4" />
                   Gửi tin nhắn
@@ -239,7 +264,19 @@ export default function ContactPage() {
             <button className="border border-gray-400 bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition cursor-pointer">
               Xem câu hỏi thường gặp
             </button>
-            <button className="bg-red-800 text-white px-6 py-3 rounded-lg hover:bg-red-900 transition flex items-center justify-center gap-2 cursor-pointer">
+            <button
+              onClick={() => {
+                navigator.clipboard
+                  .writeText("02273898060")
+                  .then(() =>
+                    alert("📞 Đã sao chép số điện thoại: 0227 389 8060")
+                  )
+                  .catch(() =>
+                    alert("⚠️ Sao chép thất bại, vui lòng thử lại!")
+                  );
+              }}
+              className="bg-red-800 text-white px-6 py-3 rounded-lg hover:bg-red-900 transition flex items-center justify-center gap-2 cursor-pointer"
+            >
               <Phone className="w-4 h-4" />
               Gọi ngay
             </button>

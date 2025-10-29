@@ -210,7 +210,7 @@ export default function InterestRatesPage() {
             {specialRates.map((special, index) => (
               <div
                 key={index}
-                className="flex items-start p-6 text-gray-900 border-green-800 border-0 rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-4"
+                className="flex items-start p-6 text-gray-900 border-green-700 border-0 rounded-xl shadow-md hover:shadow-lg transition-shadow border-l-4"
               >
                 <div className="w-18 h-12 bg-green-100 text-green-600 rounded-lg flex items-center justify-center mr-4">
                   {special.icon}

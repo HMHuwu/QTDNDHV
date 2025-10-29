@@ -126,7 +126,7 @@ export default function ServicesPage() {
             {loanServices.map((s, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition p-6 cursor-pointer hover:bg-red-50"
+                className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition p-6 hover:bg-red-50"
               >
                 <div className="w-16 h-16 bg-red-200 rounded-lg flex items-center justify-center mb-4 text-red-700">
                   {s.icon}
@@ -145,11 +145,11 @@ export default function ServicesPage() {
                   ))}
                 </ul>
 
-                <Link href="/lien-he">
-                  <button className="w-full bg-[var(--main-color)] text-white py-2 px-4 rounded-xl font-semibold hover:opacity-80 transition cursor-pointer">
+                {/* <Link href="/lien-he">
+                  <button className="w-full bg-[var(--main-color)] text-white py-2 px-4 rounded-xl font-semibold hover:opacity-80 transition">
                     Đăng ký ngay
                   </button>
-                </Link>
+                </Link> */}
               </div>
             ))}
           </div>
@@ -172,7 +172,7 @@ export default function ServicesPage() {
             {savingServices.map((s, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition p-6 cursor-pointer hover:bg-green-50"
+                className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition p-6 hover:bg-green-50"
               >
                 <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4 text-green-600">
                   {s.icon}
@@ -192,7 +192,7 @@ export default function ServicesPage() {
                 </ul>
 
                 <Link href="/lai-suat">
-                  <button className="w-full border border-gray-300 text-gray-700 py-2 px-4 rounded-xl font-semibold hover:bg-gray-100 transition cursor-pointer">
+                  <button className="w-full border border-gray-300 text-gray-700 py-2 px-4 rounded-xl font-semibold cursor-pointer hover:bg-gray-100 transition">
                     Xem lãi suất
                   </button>
                 </Link>
@@ -218,7 +218,7 @@ export default function ServicesPage() {
             {otherServices.map((s, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition p-6 cursor-pointer hover:bg-purple-50"
+                className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition p-6 hover:bg-purple-50"
               >
                 <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4 text-purple-600">
                   {s.icon}
@@ -242,7 +242,7 @@ export default function ServicesPage() {
             tài chính phù hợp nhất
           </p>
           <Link href="/lien-he">
-            <button className="bg-red-100 text-main font-semibold py-3 px-6 rounded-xl text-lg hover:bg-red-200 transition inline-flex items-center cursor-pointer">
+            <button className="bg-red-100 text-main font-semibold py-3 px-6 rounded-xl text-lg cursor-pointer hover:bg-red-200 transition inline-flex items-center">
               Liên hệ tư vấn <ArrowRight className="ml-2 w-5 h-5" />
             </button>
           </Link>
