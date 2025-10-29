@@ -1,7 +1,7 @@
 "use client";
 import { ChevronDown } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
 interface DropItem {
@@ -62,6 +62,14 @@ const Header = () => {
       console.log(rotateLine);
     }
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      setRotateLine(false);
+      setTimeout(() => setIsOpen(false), 300);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   const isActive = (link: string, dropList?: DropItem[]) => {
     if (pathname === link) return true;
@@ -173,17 +181,6 @@ const Header = () => {
             </li>
           ))}
         </ul>
-
-        {/* Desktop login */}
-        {/* <button
-          onClick={() => handleClick("/agent")}
-          className="hidden md:block text-nowrap ml-6 rounded-full bg-[var(--main-color)] px-5 py-2 text-white text-sm font-semibold hover:bg-[var(--main-color)] hover:opacity-80 transition-all duration-200"
-        >
-          Đăng Nhập
-        </button> */}
-        {/* <div className="hidden md:block text-nowrap ml-6 rounded-full bg-[var(--main-color)] px-5 py-2 text-white text-sm font-semibold hover:bg-[var(--main-color)] hover:opacity-80 transition-all duration-200">
-          <GoogleLoginButton onLoginSuccess={handleGoogleLoginSuccess} />
-        </div> */}
 
         {/* Mobile Menu */}
         {isOpen && (

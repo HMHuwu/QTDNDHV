@@ -21,7 +21,7 @@ export default function ServicesPage() {
       description:
         "Đáp ứng nhu cầu chi tiêu cá nhân, mua sắm, du lịch với lãi suất ưu đãi.",
       features: [
-        "Hạn mức lên đến 500 triệu VNĐ",
+        "Hạn mức lên đến xxx triệu VNĐ",
         "Thời gian vay linh hoạt đến 5 năm",
         "Thủ tục đơn giản, giải ngân nhanh",
       ],

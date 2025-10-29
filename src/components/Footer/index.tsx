@@ -60,15 +60,15 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>Hồng Việt, Đông Hưng, Thái Bình</span>
+                <span>thôn Bá Thôn 2, xã Tiên Hưng, tỉnh Hưng Yên</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>(028) 1234 5678</span>
+                <span>02273 898 060</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>info@qtdhongviet.vn</span>
+                <span>qtdhongviet08@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -81,7 +81,7 @@ export default function Footer() {
                 <Clock className="w-4 h-4 mt-1 flex-shrink-0" />
                 <div>
                   <div>Thứ 2 - Thứ 6:</div>
-                  <div>7:30 - 11:30 | 13:30 - 17:00</div>
+                  <div>7:00 - 11:00 | 13:00 - 17:00</div>
                 </div>
               </li>
             </ul>

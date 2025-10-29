@@ -6,35 +6,35 @@ export default function ContactPage() {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Địa chỉ",
-      content: "123 Đường Hồng Việt, Xã Tiên Hưng, Tỉnh Hưng Yên",
+      content: "thôn Bá Thôn 2, xã Tiên Hưng, tỉnh Hưng Yên",
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Điện thoại",
-      content: "(028) 1234 5678",
+      content: "02273 898 060",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      content: "info@qtdhongviet.vn",
+      content: "qtdhongviet08@gmail.com",
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Giờ làm việc",
-      content: "Thứ 2 - Thứ 6: 7:30 - 11:30 | 13:30 - 17:00",
+      content: "Thứ 2 - Thứ 6: 7:00 - 11:00 | 13:00 - 17:00",
     },
   ];
 
   const branches = [
     {
       name: "Trụ sở chính",
-      address: "Hồng Việt, Tiên Hưng, Hưng Yên",
-      phone: "(028) 1234 5678",
+      address: "thôn Bá Thôn 2, xã Tiên Hưng, tỉnh Hưng Yên",
+      phone: "02273 898 060",
     },
     {
-      name: "Chi nhánh Quận 2",
-      address: "Hoa Lư, Tiên Hưng, Hưng Yên",
-      phone: "(028) 2345 6789",
+      name: "Trụ sở phụ",
+      address: "Phòng giao dịch Hoa Lư, xã Nam Tiên Hưng, tỉnh Hưng Yên",
+      phone: "020xxxxxxxx",
     },
   ];
 
@@ -233,7 +233,7 @@ export default function ContactPage() {
           <p className="text-gray-600 mb-8">
             Bạn cần giải đáp thắc mắc? Hãy tham khảo các câu hỏi thường gặp hoặc
             liên hệ trực tiếp với chúng tôi qua hotline{" "}
-            <strong>(028) 1234 5678</strong> để được hỗ trợ nhanh chóng.
+            <strong>02273 898 060</strong> để được hỗ trợ nhanh chóng.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <button className="border border-gray-400 bg-gray-100 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-200 transition cursor-pointer">

@@ -78,19 +78,29 @@ export default function page() {
     <div>
       {/* Hero Banner */}
       <section className="relative h-[500px] md:h-[600px] bg-gradient-to-r from-red-900 to-red-800">
-        <Image
-          src="https://images.unsplash.com/photo-1696690955056-3fd701dbda85?auto=format&fit=crop&w=1080&q=80"
-          alt="Hồng Việt"
-          fill
-          className="absolute inset-0 w-full h-full object-cover opacity-10"
-        />
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/video/RedParticles.mp4" type="video/mp4" />
+          Trình duyệt của bạn không hỗ trợ video.
+        </video>
+
+        {/* Overlay tối để chữ dễ đọc */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/40 backdrop-blur-xs pointer-events-none"></div>
+
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="max-w-2xl text-white">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Quỹ tín dụng nhân dân Hồng Việt
             </h1>
             <p className="text-xl mb-8">
-              Đồng hành cùng cộng đồng - Phát triển bền vững - Uy tín và tin cậy
+              Đồng hành cùng cộng đồng, thành viên - Uy tín
+              <br />
+              Tin cậy - Phát triển bền vững
             </p>
             <div className="flex flex-col gap-4">
               <Link
