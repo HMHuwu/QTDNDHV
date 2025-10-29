@@ -63,14 +63,12 @@ export default function page() {
     {
       title: "Chương trình khuyến mại lãi suất tháng 10/2025",
       date: "01/10/2025",
-      image:
-        "https://images.unsplash.com/photo-1707779491435-000c45820db2?auto=format&fit=crop&w=1080&q=80",
+      image: "/image/quochoi.jpg",
     },
     {
       title: "Quỹ tín dụng Hồng Việt tổ chức từ thiện cộng đồng",
       date: "20/09/2025",
-      image:
-        "https://images.unsplash.com/photo-1758599668547-2b1192c10abb?auto=format&fit=crop&w=1080&q=80",
+      image: "/image/hopqh.jpg",
     },
   ];
 
@@ -85,22 +83,22 @@ export default function page() {
           muted
           playsInline
         >
-          <source src="/video/RedParticles.mp4" type="video/mp4" />
+          <source src="/video/Timeline.mp4" type="video/mp4" />
           Trình duyệt của bạn không hỗ trợ video.
         </video>
 
         {/* Overlay tối để chữ dễ đọc */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black/40 backdrop-blur-xs pointer-events-none"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-black/20 backdrop-blur-[0px] pointer-events-none"></div>
 
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="max-w-2xl text-white">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Quỹ tín dụng nhân dân Hồng Việt
             </h1>
-            <p className="text-xl mb-8">
-              Đồng hành cùng cộng đồng, thành viên - Uy tín
+            <p className="text-lg md:text-xl mb-8">
+              Đồng hành cùng cộng đồng, thành viên
               <br />
-              Tin cậy - Phát triển bền vững
+              Uy tín, tin cậy - Phát triển bền vững
             </p>
             <div className="flex flex-col gap-4">
               <Link

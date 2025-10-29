@@ -25,10 +25,14 @@ export default function Footer() {
                 <div className="text-white font-semibold">QTDND Hồng Việt</div>
               </div>
             </div>
-            <p className="text-sm leading-relaxed">
-              Quỹ tín dụng nhân dân Hồng Việt - Đồng hành cùng cộng đồng, phát
-              triển bền vững.
-            </p>
+            <div className="gap-2 text-sm ">
+              <h2 className="text-[16px]">Quỹ tín dụng nhân dân Hồng Việt</h2>
+              <p className="text-sm text-gray-200">
+                Đồng hành cùng cộng đồng, thành viên
+                <br />
+                Uy tín, tin cậy - Phát triển bền vững
+              </p>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -37,8 +41,10 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               {[
                 { href: "/gioi-thieu", label: "Giới thiệu" },
+                { href: "/noi-dung-hoat-dong", label: "Nội dung hoạt động" },
                 { href: "/san-pham-dich-vu", label: "Sản phẩm - Dịch vụ" },
                 { href: "/lai-suat", label: "Lãi suất" },
+                { href: "/van-ban-phap-luat", label: "Văn bản pháp luật" },
                 { href: "/tin-tuc", label: "Tin tức" },
                 { href: "/lien-he", label: "Liên hệ" },
               ].map((item) => (

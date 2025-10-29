@@ -134,7 +134,7 @@ export default function AboutPage() {
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
             <Image
-              src="https://images.unsplash.com/photo-1707301280380-56f7e7a00aef?auto=format&fit=crop&w=1080&q=80"
+              src="/image/anh-hong-viet.jpg"
               alt="Lịch sử Hồng Việt"
               fill
               className="object-cover"

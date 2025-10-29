@@ -118,7 +118,13 @@ export default function InterestRatesPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {savingsRates.map((rate, index) => (
+                  <tr
+                    key={"upcoming"}
+                    className="border-t hover:bg-gray-50 transition-colors text-gray-700"
+                  >
+                    <td className="py-3 px-6">Đang cập nhật ...</td>
+                  </tr>
+                  {/* {savingsRates.map((rate, index) => (
                     <tr
                       key={index}
                       className="border-t hover:bg-gray-50 transition-colors text-gray-900"
@@ -127,7 +133,7 @@ export default function InterestRatesPage() {
                       <td className="py-3 px-6 text-green-600">{rate.rate}</td>
                       <td className="py-3 px-6 text-right">{rate.minAmount}</td>
                     </tr>
-                  ))}
+                  ))} */}
                 </tbody>
               </table>
             </div>
@@ -176,7 +182,13 @@ export default function InterestRatesPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {loanRates.map((rate, index) => (
+                  <tr
+                    key={"upcoming"}
+                    className="border-t hover:bg-gray-50 transition-colors text-gray-700"
+                  >
+                    <td className="py-3 px-6">Đang cập nhật ...</td>
+                  </tr>
+                  {/* {loanRates.map((rate, index) => (
                     <tr
                       key={index}
                       className="border-t hover:bg-gray-50 transition-colors"
@@ -186,7 +198,7 @@ export default function InterestRatesPage() {
                       <td className="py-3 px-6">{rate.term}</td>
                       <td className="py-3 px-6 text-gray-600">{rate.note}</td>
                     </tr>
-                  ))}
+                  ))} */}
                 </tbody>
               </table>
             </div>

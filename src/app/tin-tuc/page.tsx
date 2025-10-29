@@ -113,7 +113,7 @@ export default function NewsPage() {
           <div className="overflow-hidden border-gray-200 border-1 rounded-xl hover:shadow-2xl transition-shadow max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2">
             <div className="relative aspect-video lg:aspect-auto">
               <Image
-                src={featuredNews.image}
+                src="/image/quochoi.jpg"
                 alt={featuredNews.title}
                 fill
                 className="object-cover"
@@ -173,7 +173,10 @@ export default function NewsPage() {
       {/* News Grid */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="text-xl text-gray-700">Đang cập nhật ...</div>
+
+          {/* tin tức */}
+          <div className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden">
             {filteredNews.map((news, index) => (
               <div
                 key={index}
