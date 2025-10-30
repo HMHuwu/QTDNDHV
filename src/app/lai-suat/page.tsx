@@ -124,16 +124,16 @@ export default function InterestRatesPage() {
                   >
                     <td className="py-3 px-6">Đang cập nhật ...</td>
                   </tr>
-                  {/* {savingsRates.map((rate, index) => (
+                  {savingsRates.map((rate, index) => (
                     <tr
                       key={index}
-                      className="border-t hover:bg-gray-50 transition-colors text-gray-900"
+                      className="border-t hover:bg-gray-50 transition-colors text-gray-900 hidden"
                     >
                       <td className="py-3 px-6">{rate.term}</td>
                       <td className="py-3 px-6 text-green-600">{rate.rate}</td>
                       <td className="py-3 px-6 text-right">{rate.minAmount}</td>
                     </tr>
-                  ))} */}
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -188,17 +188,17 @@ export default function InterestRatesPage() {
                   >
                     <td className="py-3 px-6">Đang cập nhật ...</td>
                   </tr>
-                  {/* {loanRates.map((rate, index) => (
+                  {loanRates.map((rate, index) => (
                     <tr
                       key={index}
-                      className="border-t hover:bg-gray-50 transition-colors"
+                      className="border-t hover:bg-gray-50 transition-colors hidden"
                     >
                       <td className="py-3 px-6">{rate.type}</td>
                       <td className="py-3 px-6 text-red-700">{rate.rate}</td>
                       <td className="py-3 px-6">{rate.term}</td>
                       <td className="py-3 px-6 text-gray-600">{rate.note}</td>
                     </tr>
-                  ))} */}
+                  ))}
                 </tbody>
               </table>
             </div>
