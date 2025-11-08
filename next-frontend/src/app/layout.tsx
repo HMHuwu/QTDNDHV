@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "QTDND Hồng Việt",
   description: "Quỹ Tín Dụng Nhân Dân Hồng Việt",
-  // icons: {
-  //   icon: "/image/logo.png",
-  // },
+  verification: {
+    google: "MrGurFn4gsNixSqYlKML1PxZ6IN2Zmc-L8Ii7ogAZPs",
+  },
 };
 
 export default function RootLayout({

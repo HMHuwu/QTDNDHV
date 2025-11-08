@@ -180,6 +180,24 @@ const Header = () => {
               )}
             </li>
           ))}
+          {/* {isAdmin ? (
+            <div onClick={logout}>
+              <button className="bg-red-800 text-white px-4 py-2 rounded-lg hover:opacity-90 transition cursor-pointer hover:scale-105 mt-2 text-nowrap">
+                Đăng xuất
+              </button>
+            </div>
+          ) : (
+            <div
+              onClick={(e) => {
+                e.stopPropagation();
+                handleClick("/login");
+              }}
+            >
+              <button className="bg-red-800 text-white px-4 py-2 rounded-lg hover:opacity-90 transition cursor-pointer hover:scale-105 mt-2 text-nowrap">
+                Quản trị viên
+              </button>
+            </div>
+          )} */}
         </ul>
 
         {/* Mobile Menu */}
@@ -242,7 +260,17 @@ const Header = () => {
                     )}
                   </li>
                 ))}
-                <li className="px-4 mt-4"></li>
+                {/* <div
+                  className="flex justify-center items-center"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleClick("/login");
+                  }}
+                >
+                  <button className="bg-red-800 text-white px-4 py-2 rounded-lg hover:opacity-90 transition cursor-pointer hover:scale-105 mt-4 w-80 text-nowrap">
+                    Quản trị viên
+                  </button>
+                </div> */}
               </ul>
             </div>
           </>
